@@ -73,7 +73,7 @@ If you prefer to use CMake directly:
    cmake --build . --config Release --target run
    ```
 
-Note: This CMake config intentionally aborts on non-Windows platforms (it checks WIN32 early). If you want to re-enable cross-platform support, see the "Curses backend" section.
+Note: This CMake config intentionally aborts on non-Windows platforms (it checks WIN32 early).
 
 ---
 
@@ -97,9 +97,7 @@ Note: This CMake config intentionally aborts on non-Windows platforms (it checks
 - `src/console.cpp` — Win32 console backend (uses <windows.h>)
 - `src/console_pdcurses.cpp` — optional curses backend (if you re-enable it later)
 - `CMakeLists.txt` — project configuration (Windows-only by default)
-- `build_and_play.bat` / `build_and_play_debug.bat` — helper scripts for building & running
-- `build_and_play_unix.sh` — helper for Unix (kept for reference if you re-enable curses)
-
+- 
 ---
 
 ## License
