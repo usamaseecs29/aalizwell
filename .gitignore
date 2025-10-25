@@ -1,0 +1,12 @@
+# Visual Studio / build artifacts
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.log
+*.user
+*.suo
+*.vcxproj*
+/bin/
+/Debug/
+/Release/
