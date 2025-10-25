@@ -1,4 +1,4 @@
-```markdown
+
 # BUILD (Windows) — step-by-step
 
 This guide shows exact commands to build with Visual Studio / CMake and how to use the helper batch files.
