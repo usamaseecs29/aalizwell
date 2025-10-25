@@ -1,4 +1,4 @@
-```markdown
+
 # Aal Iz Well - Tale of Seecs
 
 A small Windows console game. This repository contains the game source, helper scripts and a CMakeLists configured for Windows builds.
