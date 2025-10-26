@@ -286,7 +286,7 @@ void playGame() {
             int color = (pulse < 3) ? 10 : (pulse < 5 ? 14 : 11);
             printUnicode(kx, ky, L"★ KHAPPA ★", color);
             ky++;
-            if (ky >= py && kx >= px && kx <= px + 8) {
+            if (ky >= py && kx >= px - 8 && kx <= px + 8) {
                 if (hp < maxhp) ++hp;
                 scoreBoard(score, hp, maxhp, hopiumMeter);
                 gotoxy(kx, ky - 1); cout << "          ";
