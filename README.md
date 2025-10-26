@@ -92,14 +92,6 @@ Note: This CMake config intentionally aborts on non-Windows platforms (it checks
 
 ---
 
-## Files of interest
-
-- `src/console.cpp` — Win32 console backend (uses <windows.h>)
-- `src/console_pdcurses.cpp` — optional curses backend (if you re-enable it later)
-- `CMakeLists.txt` — project configuration (Windows-only by default)
-- 
----
-
 ## License
 
 This project is provided under the MIT License. See `LICENSE` for details.
