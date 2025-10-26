@@ -19,10 +19,10 @@ constexpr int ENEMY_START_Y = 2;
 constexpr int ENEMY_DEATH_Y = 25;
 
 constexpr int KHAPPA_TIMER_RESET = 200;
-constexpr int KHAPPA_SPAWN_CHANCE_DIV = 250; // 1 in 250 chance when timer is zero
+constexpr int KHAPPA_SPAWN_CHANCE_DIV = 500; // chance when timer is zero
 
 // Hopium rates expressed as percentages of MAX_HOPIUM
-constexpr int HOPIUM_DRAIN_PERCENT_PER_TICK = 2;
+constexpr int HOPIUM_DRAIN_PERCENT_PER_TICK = 4;
 constexpr int HOPIUM_KILL_GAIN_PERCENT = 12;
 constexpr int HOPIUM_KHAPPA_GAIN_PERCENT = 18;
 constexpr int HOPIUM_PRESS_SPACE_GAIN_PERCENT = 2;
