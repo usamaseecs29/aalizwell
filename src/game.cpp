@@ -53,14 +53,17 @@ static void gameOver(int score, int hopiumMeter) {
     cout << "==================================================================\n";
     setColor(7);
 
-    cout << "\nEnter name for leaderboard: ";
-    string name;
-    getline(cin, name);
-    if (name.empty()) name = "Anonymous";
-    if (name.size() > 18) name = name.substr(0, 18);
+     if (getFifthStudentScore() < score)
+ {
+     cout << "\nEnter name for leaderboard: ";
+     string name;
+     getline(cin, name);
+     if (name.empty()) name = "Anonymous";
+     if (name.size() > 18) name = name.substr(0, 18);
 
-    LBEntry e{ name, score, hopiumMeter };
-    writeLeaderboardAndShow(e);
+     LBEntry e{ name, score, hopiumMeter };
+     writeLeaderboardAndShow(e);
+ }
 
     // Simple menu actions (Play again, Clear leaderboard, Main menu)
     gotoxy(3, 16);
