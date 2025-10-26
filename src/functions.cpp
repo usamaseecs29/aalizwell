@@ -184,6 +184,43 @@ void writeLeaderboardAndShow(const LBEntry& e) {
     setColor(7);
 }
 
+int getFifthStudentScore() {
+    vector<LBEntry> v;
+    ifstream ifs(LEADERBOARD_FILE);
+    if (!ifs.is_open()) return 0;
+
+    string line;
+    while (getline(ifs, line)) {
+        if (line.empty()) continue;
+        stringstream ss(line);
+        string name, sc, hp;
+        if (!getline(ss, name, ',')) continue;
+        if (!getline(ss, sc, ',')) continue;
+        if (!getline(ss, hp, ',')) continue;
+        try {
+            LBEntry tmp;
+            tmp.name = name;
+            tmp.score = stoi(sc);
+            tmp.hopium = stoi(hp);
+            v.push_back(tmp);
+        }
+        catch (...) {
+            // skip malformed lines
+            continue;
+        }
+    }
+    ifs.close();
+
+    if (v.size() < 5) return 0;
+
+    sort(v.begin(), v.end(), [](const LBEntry& a, const LBEntry& b) {
+        if (a.score != b.score) return a.score > b.score;
+        return a.hopium > b.hopium;
+        });
+
+    return v[4].score; // 4 is the 5th element
+}
+
 // CHAT BOX
 void randomChatMessage() {
     if (chatLine >= CHAT_LINES) clearChatArea();
