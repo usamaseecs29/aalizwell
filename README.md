@@ -7,8 +7,6 @@ This README covers:
 - Quick start (Windows)
 - Build options (MSVC, MinGW/CMake)
 - Using provided scripts
-- Troubleshooting & tips
-- How to re-enable a cross-platform (curses) backend
 
 ---
 
