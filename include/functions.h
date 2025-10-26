@@ -22,6 +22,7 @@ void clearChatArea();
 void randomChatMessage();
 void scoreBoard(int score, int hp, int maxhp, int hopiumMeter);
 void writeLeaderboardAndShow(const LBEntry& e);
+int getFifthStudentScore();
 
 extern int chatLine;
 extern const std::vector<std::string> dushmans;
