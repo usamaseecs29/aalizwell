@@ -275,7 +275,7 @@ void playGame() {
         }
 
         // KHAPPA
-        if (khappaTimer == 0 && rand() % KHAPPA_SPAWN_CHANCE_DIV == 0) {
+        if (khappaTimer == 0 && rand() % KHAPPA_SPAWN_CHANCE_DIV == 0 && hp < 4) {
             kx = rand() % ENEMY_X_RANGE + ENEMY_MIN_X;
             ky = 2;
             khappaTimer = KHAPPA_TIMER_RESET;
@@ -288,7 +288,7 @@ void playGame() {
             printUnicode(kx, ky, L"★ KHAPPA ★", color);
             ky++;
             if (ky >= py && kx >= px - 8 && kx <= px + 8) {
-                if (hp < maxhp) ++hp;
+                if ++hp;
                 scoreBoard(score, hp, maxhp, hopiumMeter);
                 gotoxy(kx, ky - 1); cout << "          ";
 
