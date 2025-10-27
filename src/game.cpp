@@ -26,6 +26,7 @@ static void borders() {
 
 static void gameOver(int score, int hopiumMeter) {
     system("cls");
+    chatLine=0;
     setColor(11);
     cout << "==================================================================\n";
     cout << "I                                                                I\n";
